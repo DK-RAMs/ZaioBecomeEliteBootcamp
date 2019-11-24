@@ -37,8 +37,9 @@
 
             <!-- End Navbar items-->
 
-            <!--Page Items-->
+            
         <div id="customizethis">
+            <!--Page Items-->
             <div id="pageitems" class="container-fluid">
 
                 <h1 id="hickiesheading">HICKIES Originals</h1>
@@ -97,9 +98,13 @@
                 <br/>
                 <hr/>
                 <!-- Details section -->
-                <div id="itemdetails">
-                    <h5>DETAILS</h5>
-                    <div id="items"></div>
+                <div id="cartItems">
+                    <h5 id="cartDetailsHeading">DETAILS</h5>
+                    <div id="itemdetails" class="container-fluid">
+                        <div id="selected-items">
+                            <div></div>
+                        </div>
+                    </div>
                 </div>
                 <hr/>
 
@@ -128,35 +133,19 @@
                                 <span aria-hidden="true" class="hick-exit-modal">&times;</span>
                             </button>
                         </div>
-                        <div class="modal-body">
-                            <!-- Add all div elements here -->
-                            <p id="num-items-spec">How many are you buying?</p>
-                            <div id="num-items-controller-div" class="text-center">
-                                <p id="selected-color-modlar" class="d-inline">Crimson</p>
-                                <div id="editStuffystuffstyff" class="d-inline">
-                                <button id="decrement-item-in-cart" type="button" class="btn">
-                                    -
-                                </button>
-                                <span><Strong id="number-of-items-to-buy">0</Strong></span>
-                                <button id="increment-item-in-cart" type="button" class="btn">
-                                    +    
-                                </button>
-                                </div>
-                            </div>
+                        <div class="modal-body" id="add2CartModalBody">
+                            
+                            <!-- Modal elements generated via Javascript-->
+                            <div></div>
                         </div>
-                        <div id="addtocartButtons" class="modal-footer">
-                            <button type="button" id="cancelAdd2CartModalButton" data-dismiss="modal" class="btn hick-modal-btn-cancel">
-                                Close
-                            </button>
-                            <button type="button" id="acceptAdd2CartModalButton" class="btn hick-modal-btn-accept" data-dismiss="modal">
-                                Save changes for now
-                            </button>
+                        <div id="add2CartModalFooter" class="modal-footer">
+                            <!-- Modal buttons generated via Javascript -->
                         </div>
                     </div>
                 </div>
             </div>
             
-            <!-- Need help? Modal -->
+            <!-- Need help Modal -->
             
             <div id="needhelpModal" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="Help has arrived" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
@@ -170,13 +159,13 @@
                         <div class="modal-body">
                             <!-- Add all div elements here -->
                             <p id="num-items-spec">If you are in need of any support or need assistance with products, please send an email to:</p>
-                            <a href="https://gmail.com" id="customer_support_email">
+                            <a href="https://gmail.com" id="customer_support_email" id="customerSupportEmail">
                                 customerservice@laceit.org
                             </a>
                             <br/>
                             <br/>
-                            <p id="alt_help_call_desk">Alternatively, you can also call us at the number below and someone from our help desk will get to you as soon as they are available:</p>
-                            <a href="https://globfone.com/call-phone/" id="customer_support_phone_number">+27 21 685 1953</a>
+                            <p id="altHelpCallDesk">Alternatively, you can also reach out to us at the number below and someone from our help desk will get to you as soon as they are available:</p>
+                            <a href="https://globfone.com/call-phone/" id="customerSupportPhone" target="_blank">+27 21 685 1953</a>
                         </div>
                         <div id="addtocartButtons" class="modal-footer">
                             <button type="button" id="closeNeedHelpModalButton" data-dismiss="modal" class="btn hick-modal-btn-cancel">
@@ -203,7 +192,7 @@
                             <p id="shipping_refund_policy">If you are not pleased with your item, or want to clarify on shipping, email us at:
                             </p>
                             <a href="https://gmail.com/mail" id="shipping_refund_policy_email" target="_blank">
-                            shipandreturns@laceit.org.</a>
+                            shippingandreturns@laceit.org.</a>
                         </div>
                         <div id="addtocartButtons" class="modal-footer">
                             <button type="button" id="closeShippingModalButton" data-dismiss="modal" class="btn hick-modal-btn-cancel">

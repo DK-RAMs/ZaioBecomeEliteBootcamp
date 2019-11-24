@@ -1,31 +1,37 @@
 /***************************************** Base styling ***********************************************/
+html{
+    height: 100%;
+}
 
 body{
-    background: white;
+    background: black;
     color: black;
     transition: 0.3s;
     width: 100%;
     height: 100%;
-    font-family: fantasy;
     font-size: 16px;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 body::after{
     content: "";
-    background: url(img/hickies%201920x1080.png);
-    background-size: 100% 100%;
-    opacity: 0.5;
+    background: url(img/hickies%20background.PNG);
+    background-size: 100% 150%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    opacity: 0.7;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
     position: absolute;
     z-index: -1;
+    margin-bottom: -17px;
+    box-sizing: border-box;
 }
 
-div{
-    background: white;
-}
+
 
 h1{
     padding-left: 1%;
@@ -40,10 +46,12 @@ a{
 
 
 a:hover{
-    animation-name: fade;
     font-weight: bold;
     text-decoration: none;
     color: black;
+}
+a:active{
+    color: darkgrey;
 }
 
 hr{
@@ -71,10 +79,10 @@ hr{
 
 .colorblock{
     float: left;
-    margin-right: 8px;
-    margin-left: 4px;
-    margin-top: 12px;
-    padding: 12px 12px;
+    margin-right: 2%;
+    margin-left: 2%;
+    margin-top: 3%;
+    padding: 3% 3%;
     width: 24px;
     height: 24px;
     border-radius: 100%;
@@ -85,11 +93,43 @@ hr{
 }
 
 .colorblock:hover{
-    padding: 12px 12px;
+    padding: 3% 3%;
     border-style: solid;
     border-color: lightgray;
     cursor: pointer;
 }
+
+.modal-backdrop{
+    opacity: 0.5;
+}
+
+.modal-header{
+    color: white;
+    background-color: black;
+}
+
+.hick-modal-btn-accept{
+    color: white;
+    background-color: black;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    border-radius: 100px;
+}
+
+.hick-modal-btn-cancel{
+    color: black;
+    background-color: white;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    border-radius: 100px;
+}
+
+.hick-exit-modal{
+    color: white;
+}
+
 
 /* End class styling*/
 
@@ -97,14 +137,24 @@ hr{
 
 /***** Heading styles *****/
 
+#lace-it-logo{
+    width: 50%;
+    height: 100%;
+    position: relative;
+    left: 26%;
+}
+
 #yeet{
     color: aliceblue;
+    font-family: cursive;
     transition: 0.3s;
+    align-self: center;
+    margin: auto;
 }
 
 #yeet:active{
-    color: orange;
-    text-decoration-color: orange;
+    color: black;
+    text-decoration-color: black;
 }
 
 #yeet:visited{
@@ -113,9 +163,18 @@ hr{
 }
 
 #yeet:hover{
-    color: red;
+    color: bisque;
     text-decoration: underline;
     cursor: pointer;
+}
+
+/***** Logo location ******/
+
+#lace-it-logo-location{
+    font-family: Jazz LET;
+    text-decoration-style: dotted;
+    text-decoration-color: aliceblue;
+    text-decoration-line:underline;
 }
 
 /**** Stars ****/
@@ -135,15 +194,30 @@ hr{
     font-weight: lighter;
     font-size: 80%;
 }
+
+#baseprice{
+    font-size: 125%;
+}
+
 /**** Page Items Styling ****/
 #pageitems{
     padding: 10px;
+    background: white;
+    margin-bottom: 10px;
+    min-width: 320px;
+    width: 50%;
+    height: 100%;
+    min-height: 710px;
+}
+
+#customizethis{
+    height: 100%;
 }
 
 /******* Pricing styles *******/
 #netprice{
     font-weight: bold;
-    font-size: 24px;
+    font-size: 200%;
     color: orangered;
 }
 
@@ -156,6 +230,7 @@ hr{
     margin-left: 3%;
     color: darkgray;
     font-weight: bold;
+    font-size: 125%;
 }
 
 #color-spec{
@@ -164,6 +239,7 @@ hr{
 
 #special{
     padding-left: 1%;
+    font-size: 150%;
 }
 
 #starandpriceregion{
@@ -176,17 +252,18 @@ hr{
     max-width: 50%;
 }
 
-#colorselector{
+#colorsdiv{
+    height: 70%;
 }
 
 #lace-pic{
-    width: 35%;
-    height: 1%;
-    min-width: 200px;
+    width: 45%;
+    height: 40%%;
+    min-width: 147.78124237px;
 }
 
 #quantity-div{
-    padding: 10px 2.0%;
+    padding: 1.5% 3%;
     border-radius: 50px;
     border-style: solid;
     border-width: 2px;
@@ -197,22 +274,23 @@ hr{
     cursor: default;
 }
 
+
+
 #add2cartbutton{
-    padding: 10px 10%;
+    padding: 1.5% 12%;
     margin: 0px 20px;
     color:aliceblue;
+    border-width: 2px;
+    border-color: black;
+    border-style: solid;
     box-sizing:border-box;
     background-color: black;
     border-radius: 100px;
-    border-style: none;
-    font-weight: bold;
-}
-#rest-of-page{
     font-weight: bold;
 }
 
 #add2cartbutton:hover{
-    padding: 8px 9.8%;
+    padding: 1.5% 12%;
     box-sizing:border-box;
     margin: 0px 20px;
     border-width: 2px;
@@ -220,6 +298,29 @@ hr{
     border-color: black;
     color: black;
     background-color: white;
-    transition: 0s;
+    transition: 0.3s;
+}
+
+#rest-of-page{
+    font-weight: bold;
+}
+
+#cancelAdd2CartModalButton{
+    padding: 1.5% 10%
+    border-radius: 100px;
+}
+
+#decrement-item-in-cart{
+    border-radius: 100%;
+    font-weight: bold;
+    color: white;
+    background-color: black;
+}
+
+#increment-item-in-cart{
+    border-radius: 100%;
+    font-weight: bold;
+    color: white;
+    background-color: black;
 }
 /* End ID Styling*/
